@@ -7,7 +7,7 @@ const GuestList = async () => {
 
 
     return (
-        <ul className="w-[380px] my-7 fontStyles space-y-2 overflow-y-scroll hiddenScrollBar">
+        <ul className="w-[300px] my-7 fontStyles space-y-2 overflow-y-scroll hiddenScrollBar">
             {guestData.map((data) => (
                 <ButonsGuest id={data.id} key={data.id} name={data.name} url={data.url} />
             ))}

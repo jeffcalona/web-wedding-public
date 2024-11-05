@@ -20,7 +20,7 @@ const AdminPage = async () => {
                     <FormGuest />
                 </div>
             </div>
-            <Separator className="bg-black w-[380px] mt-2" />
+            <Separator className="bg-black w-[300px] mt-2" />
             <GuestList />
         </section>
     )

@@ -82,7 +82,7 @@ const DatePage = () => {
                 <p className="mt-4">28. 12. 2024</p>
             </div>
             {/* <DownButton to="#agenda" /> */}
-            <div className="w-full flex justify-center absolute bottom-0 z-30">
+            <div className="w-full flex justify-center absolute bottom-16 z-30">
                 <ArrowDownIcon className="w-20 left-0 z-30 opacity-30" />
             </div>
         </section>

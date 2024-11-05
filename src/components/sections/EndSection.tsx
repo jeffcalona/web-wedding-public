@@ -19,7 +19,7 @@ const EndSection = () => {
             <p className="w-[360px] m-auto fontStyles text-white text-center absolute z-20 leading-[17px]">Para disfrutar de una velada especial, agradecemos que este sea un evento solo para adultos.</p>
             <p className="w-[360px] mx-auto fontStyles text-white text-center absolute bottom-36 z-20">confirma tu asistencia</p>
             {/* <OnTopButton to="#inicio" /> */}
-            <div className="w-full flex justify-center absolute bottom-0 z-30">
+            <div className="w-full flex justify-center absolute bottom-16 z-30">
                 <ArrowDownIcon className="w-20 left-0 z-30 opacity-40 rotate-180" />
             </div>
         </section>

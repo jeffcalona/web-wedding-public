@@ -94,7 +94,7 @@ const DressSection = () => {
                 </div>
             </div>
             {/* <DownButton to="#end" /> */}
-            <div className="w-full flex justify-center absolute bottom-0 z-30">
+            <div className="w-full flex justify-center absolute bottom-16 z-30">
                 <ArrowDownIcon className="w-20 left-0 z-30 opacity-30" />
             </div>
         </section>

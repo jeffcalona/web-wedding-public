@@ -15,7 +15,7 @@ export default function Home() {
           </div>
         </header>
         <div className=" flex flex-col items-center mt-8">
-          <div className="w-[400px] text-center space-y-4">
+          <div className="w-[360px] text-center space-y-4">
             <p className="fontStyles text-white !tracking-[0.5px] text-[16px]">En los caminos de la vida, encontramos un amor que trasciende las estaciones. Con corazones abiertos y llenos de gratitud, queremos invitarte a compartir esta nueva aventura juntos que aquí comienza, donde cada paso será dado de la mano de Dios.</p>
             <Separator className="w-[120px] m-auto" />
             <p className="fontStyles text-white !tracking-[0.5px] text-[16px]">28. 12. 2024</p>
