@@ -5,7 +5,7 @@ import Portada from '/public/images/Portada.jpg'
 
 export default function Home() {
   return (
-    <main>
+    <main className="h-auto">
       <Image src={Portada} alt="Boda Camila y Camilo" layout="fill" objectFit="cover" />
       <div className="bg-black w-full h-full absolute top-0 opacity-35 z-10" />
       <section className="w-full absolute top-0 z-20">

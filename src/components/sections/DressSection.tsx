@@ -1,6 +1,5 @@
 import Color from "../Color"
-import ArrowDownIcon from "../ui/ArrowDownIcon"
-// import DownButton from "../DownButton"
+import ArrowDownComponent from "../ui/ArrowDownComponent"
 
 const colorPalet = {
     black: [
@@ -49,7 +48,7 @@ const colorPalet = {
 
 const DressSection = () => {
     return (
-        <section id="la ropa" className="h-screen relative text-center fontStyles leading-[17px] flex flex-col justify-between snap-start">
+        <section id="la ropa" className="h-full relative text-center fontStyles leading-[17px] flex flex-col justify-between snap-start">
             <h3 className="text-[56px] h-[10%] flex justify-center items-end">la ropa</h3>
             <div className="h-[88%] flex flex-col justify-between items-center pb-24">
                 <div className="w-[360px] m-auto">
@@ -58,8 +57,8 @@ const DressSection = () => {
                     <p>Agradecemos que cada detalle de su presencia sume a la magia de este día inolvidable.</p>
                 </div>
                 <div className="w-[360px] m-auto">
-                    <p className="theNautigalFont mb-4 text-gray-400">hospedaje</p>
-                    <p>El lugar cuenta con alojamiento disponible para los invitados. El costo es de 100,000 COP por persona. Si desean reservar, por favor confírmenlo con anticipación, y la recepción del hotel se comunicará con ustedes para agilizar el proceso de reserva.</p>
+                    <p className="theNautigalFont mb-4 text-gray-400">Paleta de Color</p>
+                    <p>Inspírate en estos colores para elegir la ropa que usarás en este día tan especial</p>
                 </div>
                 <div className="flex justify-center space-x-[8px] [&>ul]:space-y-[8px]">
                     <ul>
@@ -93,10 +92,7 @@ const DressSection = () => {
                     </ul>
                 </div>
             </div>
-            {/* <DownButton to="#end" /> */}
-            <div className="w-full flex justify-center absolute bottom-16 z-30">
-                <ArrowDownIcon className="w-20 left-0 z-30 opacity-30" />
-            </div>
+            <ArrowDownComponent />
         </section>
     )
 }

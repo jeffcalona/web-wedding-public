@@ -1,10 +1,15 @@
 'use client'
 
-import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel"
+import { DialogTrigger } from "./ui/dialog"
 
 interface CarouselImagesProps {
   id: number,
   image: string
+}
+
+interface CarouselGuestProps {
+  imageSelected: (image: string) => void
 }
 
 const carouselImages: CarouselImagesProps[] = [
@@ -18,17 +23,23 @@ const carouselImages: CarouselImagesProps[] = [
   { id: 8, image: '/images/carouselGuest/IMG_3416.jpg' }
 ]
 
-const CarouselGuest = () => {
+const CarouselGuest: React.FC<CarouselGuestProps> = ({ imageSelected }) => {
 
   return (
-    <Carousel className="h-[230px] flex">
+    <Carousel className="h-[230px] px-9 flex overflow-y-hidden" opts={{
+      dragFree: true
+    }}>
       <CarouselContent className="h-full">
         {carouselImages.map((data, index) => (
-          <CarouselItem key={index} className="basis-[180px] h-full">
-            <img src={data.image} alt="Camila y Camilo" className="w-full h-full object-cover" />
+          <CarouselItem key={index} onClick={() => imageSelected(data.image)} className="basis-[180px] h-full">
+            <DialogTrigger asChild className="cursor-pointer">
+              <img src={data.image} alt="Camila y Camilo" className="w-full h-full object-cover" />
+            </DialogTrigger>
           </CarouselItem >
         ))}
       </CarouselContent >
+      <CarouselPrevious className="left-2" />
+      <CarouselNext className="right-2" />
     </Carousel>
   )
 }

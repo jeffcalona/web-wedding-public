@@ -3,8 +3,7 @@
 import Image from "next/image"
 import DateSectionImage from '/public/images/DateSectionImage.jpg'
 import { useEffect, useState } from "react"
-import ArrowDownIcon from "../ui/ArrowDownIcon"
-// import DownButton from "../DownButton"
+import ArrowDownComponent from "../ui/ArrowDownComponent"
 
 const DatePage = () => {
 
@@ -50,12 +49,12 @@ const DatePage = () => {
     }, [])
 
     return (
-        <section id="fecha" className="h-screen relative flex justify-center items-center snap-start">
+        <section id="fecha" className="h-full relative flex justify-center items-center snap-start">
             <Image src={DateSectionImage} alt="Boda Camila y Camilo" layout="fill" objectFit="cover" />
             <div className="bg-black w-full h-full absolute top-0 opacity-35 z-10" />
             <div className="absolute fontStyles text-white w-[360px] z-20 text-center h-[300px] grid">
                 <p className="w-[80%] m-auto row-span-1 leading-[17px]">que comience la cuenta regresiva</p>
-                <div className="flex justify-center space-x-4 row-span-1">
+                <div className="flex justify-center space-x-6 row-span-1">
                     {isLoading === true ? (
                         <p>Cargando cuenta regresiva...</p>
                     ) : (
@@ -81,10 +80,7 @@ const DatePage = () => {
                 </div>
                 <p className="mt-4">28. 12. 2024</p>
             </div>
-            {/* <DownButton to="#agenda" /> */}
-            <div className="w-full flex justify-center absolute bottom-16 z-30">
-                <ArrowDownIcon className="w-20 left-0 z-30 opacity-30" />
-            </div>
+            <ArrowDownComponent />
         </section>
     )
 }
