@@ -27,8 +27,8 @@ const GuestSection: React.FC<GuestSectionProps> = ({ guest }) => {
         <section id="invitado" className="snap-start h-full w-full fontStyles relative py-14 flex flex-col items-center text-center">
             <Dialog>
                 <LargeP text="Contar con tu presencia será un capítulo invaluable en nuestra historia de amor.  Te esperamos." textColor="text-black" />
-                <div className="py-14">
-                    <h3 className="theNautigalFont leading-[55px]">{newGuest}</h3>
+                <div className="py-14 w-full">
+                    <h3 className="theNautigalFont leading-[55px] w-[75%] mx-auto">{newGuest}</h3>
                     <Separator className="mt-3 w-[120px] mx-auto bg-black" />
                 </div>
                 <p className="text-[12px] mb-14">invitación especial</p>
