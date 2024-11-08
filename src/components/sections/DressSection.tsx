@@ -1,5 +1,8 @@
 import Color from "../Color"
 import ArrowDownComponent from "../ui/ArrowDownComponent"
+import LargeP from "../ui/LargeP"
+import TitleBellota from "../ui/TitleBellota"
+import TitleTheNautigal from "../ui/TitleTheNautigal"
 
 const colorPalet = {
     black: [
@@ -48,48 +51,51 @@ const colorPalet = {
 
 const DressSection = () => {
     return (
-        <section id="la ropa" className="h-full relative text-center fontStyles leading-[17px] flex flex-col justify-between snap-start">
-            <h3 className="text-[56px] h-[10%] flex justify-center items-end">la ropa</h3>
-            <div className="h-[88%] flex flex-col justify-between items-center pb-24">
-                <div className="w-[360px] m-auto">
-                    <p>Nos encantaría que sus atuendos sean formales para hacer de este día algo aún más especial. Para las damas, sugerimos un vestido largo o si lo prefieren un pantalón elegante. y para Los caballeros, sugerimos traje formal.</p>
-                    <br />
-                    <p>Agradecemos que cada detalle de su presencia sume a la magia de este día inolvidable.</p>
+        <section id="la ropa" className="h-full relative text-center fontStyles flex flex-col justify-between snap-start">
+            <TitleBellota text="atuendo" className="h-[10%]" />
+            <div className="h-[88%] flex flex-col items-center space-y-12">
+                <div>
+                    <div className="mx-auto space-y-5">
+                        <LargeP text="Nos encantaría que sus atuendos sean formales para hacer de este día algo aún más especial. Para las damas, sugerimos un vestido largo o si lo prefieren un pantalón elegante. y para Los caballeros, sugerimos traje formal." />
+                        <LargeP text="Agradecemos que cada detalle de su presencia sume a la magia de este día inolvidable." />
+                    </div>
                 </div>
-                <div className="w-[360px] m-auto">
-                    <p className="theNautigalFont mb-4 text-gray-400">Paleta de Color</p>
-                    <p>Inspírate en estos colores para elegir la ropa que usarás en este día tan especial</p>
-                </div>
-                <div className="flex justify-center space-x-[8px] [&>ul]:space-y-[8px]">
-                    <ul>
-                        {colorPalet.black.map((data) => (
-                            <Color key={data.id} color={data.color} />
-                        ))}
-                    </ul>
-                    <ul>
-                        {colorPalet.blue.map((data) => (
-                            <Color key={data.id} color={data.color} />
-                        ))}
-                    </ul>
-                    <ul>
-                        {colorPalet.lilac.map((data) => (
-                            <Color key={data.id} color={data.color} />
-                        ))}
-                    </ul>
-                    <ul>
-                        {colorPalet.pink.map((data) => (
-                            <Color key={data.id} color={data.color} />
-                        ))}
-                    </ul><ul>
-                        {colorPalet.orange.map((data) => (
-                            <Color key={data.id} color={data.color} />
-                        ))}
-                    </ul>
-                    <ul>
-                        {colorPalet.yellow.map((data) => (
-                            <Color key={data.id} color={data.color} />
-                        ))}
-                    </ul>
+                <div className="">
+                    <div className="mx-auto mb-2">
+                        <TitleTheNautigal text="paleta de color" />
+                        <LargeP text="inspírate en estos colores para elegir el atuendo que usarás en este día tan especial" />
+                    </div>
+                    <div className="flex justify-center space-x-[8px] [&>ul]:space-y-[4px]">
+                        <ul>
+                            {colorPalet.black.map((data) => (
+                                <Color key={data.id} color={data.color} />
+                            ))}
+                        </ul>
+                        <ul>
+                            {colorPalet.blue.map((data) => (
+                                <Color key={data.id} color={data.color} />
+                            ))}
+                        </ul>
+                        <ul>
+                            {colorPalet.lilac.map((data) => (
+                                <Color key={data.id} color={data.color} />
+                            ))}
+                        </ul>
+                        <ul>
+                            {colorPalet.pink.map((data) => (
+                                <Color key={data.id} color={data.color} />
+                            ))}
+                        </ul><ul>
+                            {colorPalet.orange.map((data) => (
+                                <Color key={data.id} color={data.color} />
+                            ))}
+                        </ul>
+                        <ul>
+                            {colorPalet.yellow.map((data) => (
+                                <Color key={data.id} color={data.color} />
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
             <ArrowDownComponent />

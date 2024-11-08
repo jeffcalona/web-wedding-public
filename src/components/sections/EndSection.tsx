@@ -2,6 +2,7 @@ import Image from "next/image"
 import EndSectionImage from '/public/images/EndSectionImage.jpg'
 import LogoIconCC from "../ui/LogoIconCC"
 import ArrowDownComponent from "../ui/ArrowDownComponent"
+import LargeP from "../ui/LargeP"
 
 const EndSection = () => {
     return (
@@ -15,8 +16,12 @@ const EndSection = () => {
                     </div>
                 </header>
             </div>
-            <p className="w-[360px] m-auto fontStyles text-white text-center absolute z-20 leading-[17px]">Para disfrutar de una velada especial, agradecemos que este sea un evento solo para adultos.</p>
-            <p className="w-[360px] mx-auto fontStyles text-white text-center absolute bottom-36 z-20">confirma tu asistencia</p>
+            <div className="absolute z-20">
+                <LargeP text="Para disfrutar de una velada especial, agradecemos que este sea un evento solo para adultos." textColor="text-white" />
+            </div>
+            <div className="absolute z-20 bottom-36 w-full">
+                <LargeP text="confirma tu asistencia" textColor="text-white" />
+            </div>
             <ArrowDownComponent rotate={true} />
         </section>
     )

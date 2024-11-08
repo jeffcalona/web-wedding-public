@@ -81,7 +81,7 @@ html {
   font-family: var(--font-bellota);
   text-transform: uppercase;
   font-weight: bold;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.5px;
   font-size: 15px;
 }
 
@@ -171,3 +171,5 @@ html {
   transition: padding-left 0.3s ease, opacity 0.3s ease;
   /* Transiciones suaves para padding y opacity */
 }
+
+/* Animations */

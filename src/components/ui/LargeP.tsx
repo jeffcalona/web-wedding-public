@@ -1,11 +1,12 @@
 interface LargePPros {
     text: string,
-    textColor: string
+    textColor?: string,
+    width?: string
 }
 
-const LargeP: React.FC<LargePPros> = ({ text, textColor }) => {
+const LargeP: React.FC<LargePPros> = ({ text, textColor = 'text-black', width = 'w-[80%]' }) => {
     return (
-        <p className={`fontStyles ${textColor} !tracking-[0.5px] text-sm w-[80%] mx-auto text-center`}>{text}</p>
+        <p className={`fontStyles ${textColor} ${width} mx-auto text-center leading-4`}>{text}</p>
     )
 }
 
