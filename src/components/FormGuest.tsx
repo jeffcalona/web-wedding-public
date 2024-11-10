@@ -42,7 +42,7 @@ const FormGuest = () => {
                     render={({ field }) => (
                         <FormItem>
                             <FormControl>
-                                <input type="text" placeholder="Cola el nombre del invitado" {...field} className="w-full border border-black p-3 text-center fontStyles !tracking-[1px] focus:outline-none focus:border-slate-500 placeholder:text-[12px] !text-sm" />
+                                <input type="text" placeholder="Cola el nombre del invitado" {...field} className="w-full border border-black p-3 text-center fontStyles !tracking-[1px] focus:outline-none focus:border-slate-500 placeholder:text-[12px] !text-[16px]" />
                             </FormControl>
                         </FormItem>
                     )}

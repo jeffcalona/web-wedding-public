@@ -5,7 +5,11 @@ interface buttonProps {
 
 const ButtonC: React.FC<buttonProps> = ({ label, disabled }) => {
   return (
-    <button className="bg-black text-white p-3 uppercase hover:bg-slate-800 font-bold" disabled={disabled}>{label}</button>
+    <button className={`py-3 uppercase ${disabled ? 'bg-slate-800 hover:slate-800 text-slate-200' : 'bg-black hover:bg-slate-800 text-white'} font-bold flex justify-center items-center`} disabled={disabled}>{label}
+      {disabled && (
+        <div className="spinner ml-2" />
+      )}
+    </button>
   )
 }
 

@@ -14,7 +14,7 @@ const loginPage = ({
     return (
         <>
             <h2 className="uppercase h-[25%] flex justify-center items-end pb-14 font-bold">inicia sesión</h2>
-            <div className="h-[55%] w-[250px] m-auto">
+            <div className="h-[55%] w-[75%] m-auto">
                 <FormLogin />
                 {!isToken && noParams && (
                     <p className="text-center mt-4">El token no existe</p>

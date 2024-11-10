@@ -46,7 +46,7 @@ const FormLogin = () => {
                     render={({ field }) => (
                         <FormItem>
                             <FormControl>
-                                <input placeholder="email" className="w-full border border-black p-3 text-center text-sm focus:outline-none focus:border-slate-500 placeholder:uppercase" {...field} />
+                                <input placeholder="email" className="w-full border border-black p-3 text-center text-[16px] focus:outline-none focus:border-slate-500 placeholder:uppercase lowercase" {...field} />
                             </FormControl>
                             <FormMessage className="font-bold" />
                         </FormItem>
@@ -58,7 +58,7 @@ const FormLogin = () => {
                     render={({ field }) => (
                         <FormItem>
                             <FormControl>
-                                <input type="password" placeholder="contraseña" className="w-full border border-black p-3 text-center text-sm focus:outline-none focus:border-slate-500 placeholder:uppercase" {...field} />
+                                <input type="password" placeholder="contraseña" className="w-full border border-black p-3 text-center text-[16px] focus:outline-none focus:border-slate-500 placeholder:uppercase" {...field} />
                             </FormControl>
                             <FormMessage className="font-bold" />
                         </FormItem>

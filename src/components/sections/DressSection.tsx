@@ -7,10 +7,10 @@ import TitleTheNautigal from "../ui/TitleTheNautigal"
 const colorPalet = {
     black: [
         { id: 1, color: 'bg-[#010101]' },
-        { id: 2, color: 'bg-[#383838]' },
+        { id: 2, color: 'bg-[#434343]' },
         { id: 3, color: 'bg-[#696969]' },
-        { id: 4, color: 'bg-[#8F8D8D]' },
-        { id: 5, color: 'bg-[#C1BDB4]' }
+        { id: 4, color: 'bg-[#949393]' },
+        { id: 5, color: 'bg-[#c8c7c4]' }
     ],
     blue: [
         { id: 6, color: 'bg-[#22466F]' },
@@ -41,11 +41,18 @@ const colorPalet = {
         { id: 25, color: 'bg-[#F7E1CD]' }
     ],
     yellow: [
-        { id: 26, color: 'bg-[#FEC235]' },
-        { id: 27, color: 'bg-[#FFD372]' },
+        { id: 26, color: 'bg-[#feb917]' },
+        { id: 27, color: 'bg-[#feca5a]' },
         { id: 28, color: 'bg-[#FEDA82]' },
         { id: 29, color: 'bg-[#F7DDA2]' },
         { id: 30, color: 'bg-[#FFF3D7]' }
+    ],
+    coffee: [
+        { id: 26, color: 'bg-[#4C2B08]' },
+        { id: 27, color: 'bg-[#6D3914]' },
+        { id: 28, color: 'bg-[#975b31]' },
+        { id: 29, color: 'bg-[#b88b5c]' },
+        { id: 30, color: 'bg-[#D7BDA7]' }
     ]
 }
 
@@ -65,7 +72,7 @@ const DressSection = () => {
                         <TitleTheNautigal text="paleta de color" />
                         <LargeP text="inspírate en estos colores para elegir el atuendo que usarás en este día tan especial" />
                     </div>
-                    <div className="flex justify-center space-x-[8px] [&>ul]:space-y-[4px]">
+                    <div className="flex justify-center space-x-[4px] [&>ul]:space-y-[4px]">
                         <ul>
                             {colorPalet.black.map((data) => (
                                 <Color key={data.id} color={data.color} />
@@ -85,7 +92,13 @@ const DressSection = () => {
                             {colorPalet.pink.map((data) => (
                                 <Color key={data.id} color={data.color} />
                             ))}
-                        </ul><ul>
+                        </ul>
+                        <ul>
+                            {colorPalet.coffee.map((data) => (
+                                <Color key={data.id} color={data.color} />
+                            ))}
+                        </ul>
+                        <ul>
                             {colorPalet.orange.map((data) => (
                                 <Color key={data.id} color={data.color} />
                             ))}

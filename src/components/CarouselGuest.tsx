@@ -20,7 +20,12 @@ const carouselImages: CarouselImagesProps[] = [
   { id: 5, image: '/images/carouselGuest/IMG_3402.jpg' },
   { id: 6, image: '/images/carouselGuest/IMG_3405.jpg' },
   { id: 7, image: '/images/carouselGuest/IMG_3415.jpg' },
-  { id: 8, image: '/images/carouselGuest/IMG_3416.jpg' }
+  { id: 8, image: '/images/carouselGuest/IMG_3416.jpg' },
+  { id: 9, image: '/images/carouselGuest/IMG_3443.jpg' },
+  { id: 10, image: '/images/carouselGuest/IMG_3484.jpg' },
+  { id: 11, image: '/images/carouselGuest/IMG_3509.jpg' },
+  { id: 12, image: '/images/carouselGuest/IMG_3510.jpg' },
+  { id: 13, image: '/images/carouselGuest/IMG_3708.jpg' }
 ]
 
 const CarouselGuest: React.FC<CarouselGuestProps> = ({ imageSelected }) => {

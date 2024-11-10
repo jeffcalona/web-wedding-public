@@ -16,6 +16,7 @@ const ButonsGuest: React.FC<ButtonCopyUrlProps> = ({ id, name, url }) => {
     const { toast } = useToast()
 
     const [isSwiped, setIsSwiped] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
 
     const handleCopy = async (url: string) => {
         try {
@@ -30,6 +31,7 @@ const ButonsGuest: React.FC<ButtonCopyUrlProps> = ({ id, name, url }) => {
 
     const handleSwipe = async () => {
         setIsSwiped(true);
+        setIsLoading(true)
 
         // Mostrar el mensaje de "Eliminar" antes de la confirmación
         const confirmed = await new Promise<boolean>((resolve) => {
@@ -49,6 +51,7 @@ const ButonsGuest: React.FC<ButtonCopyUrlProps> = ({ id, name, url }) => {
             // Si no se confirma, revertimos el estado
             setIsSwiped(false);
         }
+        setIsLoading(false)
     }
 
     return (
@@ -62,6 +65,11 @@ const ButonsGuest: React.FC<ButtonCopyUrlProps> = ({ id, name, url }) => {
             <button onClick={() => handleCopy(url)} className="py-1 px-2 transition duration-150 ease-in-out active:bg-slate-100 motion-reduce:transition-none">
                 <CopyIcon width={30} height={30} />
             </button>
+            {isLoading && (
+                <div className="absolute w-full h-[100dvh] bg-black/10 top-0 left-0 flex items-center justify-center">
+                    <div className="spinner" />
+                </div>
+            )}
         </li>
     )
 }

@@ -104,8 +104,14 @@ html {
 
 .hiddenScrollBar::-webkit-scrollbar {
   display: none;
-  /* Para Chrome, Safari y Edge */
 }
+
+/* scroll container */
+.scrollCotaniner {
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
 
 /* Estilos para aplicar el swipe de los invitados */
 .guest-itemSwipe {
@@ -172,4 +178,18 @@ html {
   /* Transiciones suaves para padding y opacity */
 }
 
-/* Animations */
+/* Spinner Animations */
+.spinner {
+  width: 22px;
+  height: 22px;
+  border: 3px solid #fff;
+  border-top-color: #000;
+  border-radius: 100%;
+  animation: spin 1s infinite
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg)
+  }
+}

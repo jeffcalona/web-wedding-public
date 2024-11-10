@@ -26,7 +26,7 @@ const Guest = async ({ params }: GuestParams) => {
     }
 
     return (
-        <main className="h-[100dvh] overflow-auto snap-y snap-mandatory hiddenScrollBar">
+        <main className="h-[100dvh] w-full overflow-y-scroll scrollCotaniner hiddenScrollBar">
             <Home />
             <GuestPage guest={guestResponse.name} />
             <DatePage />
